@@ -22,11 +22,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         verbose_name=_('last name'),
         max_length=30,
     )
-    # dob = models.DateField(
-    #     verbose_name=_('date of birth'),
-    #     help_text=_('YYYY-MM-DD e.g. 1990-11-30'),
-    #     default='1990-11-30',
-    # )
 
     # Automatic
     date_joined = models.DateTimeField(
@@ -54,10 +49,14 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return f'{self.first_name} {self.last_name} ({self.email})'
 
+    @property
+    def display_name(self):
+        return f'{self.first_name} {self.last_name}'
+
     class Meta:
         verbose_name = _('custom user')
         verbose_name_plural = _('custom users')
-        ordering = ['is_superuser', 'is_staff', 'email', 'last_name', 'first_name', ]
+        ordering = ['email', 'first_name', 'last_name', 'is_superuser', 'is_staff', ]
         constraints = [
             models.CheckConstraint(
                 name='%(app_label)s_%(class)s_email_not_blank',

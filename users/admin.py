@@ -14,24 +14,24 @@ class CustomUserAdmin(UserAdmin):
 
     # Main list
     list_display = (
+        'email',
+        'first_name',
+        'last_name',
         'is_superuser',
         'is_staff',
-        'email',
-        'last_name',
-        'first_name',
         'last_login',
     )
     ordering = (
+        'email',
+        'first_name',
+        'last_name',
         'is_superuser',
         'is_staff',
-        'email',
-        'last_name',
-        'first_name',
     )
     search_fields = (
         'email',
-        'last_name',
         'first_name',
+        'last_name',
     )
     list_filter = (
         'is_superuser',
