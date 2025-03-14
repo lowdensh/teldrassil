@@ -19,6 +19,10 @@ from django.urls import include, path
 
 
 urlpatterns = [
-    path('admin', admin.site.urls),
-    path('blog/', include('blog.urls')),
+  # Django
+  path('admin', admin.site.urls),
+
+  # teldrassil
+  path('', include('users.urls')),
+  path('blog/', include('blog.urls')),
 ]
