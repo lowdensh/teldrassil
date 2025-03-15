@@ -1,0 +1,61 @@
+<!--URL Dispatcher     https://docs.djangoproject.com/en/5.1/topics/http/urls/ -->
+<!--URL Pattern Names  https://docs.djangoproject.com/en/5.1/topics/http/urls/#naming-url-patterns -->
+<!--URL Template Tag   https://docs.djangoproject.com/en/5.1/ref/templates/builtins/#url -->
+
+{% load static %}
+
+<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body pixelify">
+  <div class="container-fluid">
+
+    <!--Branding-->
+    <a class="navbar-brand" href="#">
+      <img src="{% static 'images/favicon.ico' %}" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
+      teldrassil
+    </a>
+
+    <!--Toggle-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Main Nav Links (Responsive Hamburger)-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'users-home' %}">
+          home
+        </a></li>
+
+        <li class="nav-item"><a class="nav-item nav-link" href="{% url 'blog-posts_all' %}">
+          blog
+        </a></li>
+
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          projects
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" target="_blank" href="https://github.com/lowdensh/teldrassil">
+              teldrassil
+            </a></li>
+            <li><a class="dropdown-item" target="_blank" href="https://github.com/lowdensh/langy">
+              langy
+            </a></li>
+            <li><a class="dropdown-item" target="_blank" href="https://github.com/vddCore/Iris">
+              iris
+            </a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" target="_blank" href="https://github.com/lowdensh">
+              github
+            </a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">
+          deadlink
+        </a></li>
+
+      </ul>
+    </div> <!--END Main Nav Links-->
+
+  </div> <!--END container-->
+</nav> <!--END navbar sticky-->
