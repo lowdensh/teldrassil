@@ -1,3 +1,57 @@
+:root {
+  --green-dark: #3f5e02ff;
+  --green-bold: #1abc05ff;
+  --green-midd: #83bc42ff;
+  --green-lite: #bfc289ff;
+  --pink-dark:  #87025eff;
+  --pink-bold:  #f104aaff;
+  --pink-midd:  #f15db8ff;
+  --pink-lite:  #f4a3d2ff;
+}
+
+.bg-green-dark { background-color: var(--green-dark); }
+.bg-green-bold { background-color: var(--green-bold); }
+.bg-green-midd { background-color: var(--green-midd); }
+.bg-green-lite { background-color: var(--green-lite); }
+.bg-pink-dark  { background-color: var(--pink-dark);  }
+.bg-pink-bold  { background-color: var(--pink-bold);  }
+.bg-pink-midd  { background-color: var(--pink-midd);  }
+.bg-pink-lite  { background-color: var(--pink-lite);  }
+
+a.dropdown-item:active {
+  background-color: var(--green-bold);
+}
+
+/* Ref. CSS combinators and selectors */
+a:not(nav *) {
+  font-family: "Pixelify Sans", sans-serif;
+  text-decoration: var(--green-bold) underline dashed;
+  font-weight: bold;
+  color: #fff;
+  transition: ease-in-out .15s;
+}
+
+a:not(nav *):hover {
+  text-decoration: #fff underline dashed;
+  color: var(--green-bold);
+}
+
+a:not(nav *)::before {
+  content: '> ';
+  color: var(--green-bold);
+}
+
+b {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: bold;
+  color: var(--pink-lite);
+}
+
+.colorblock {
+  padding: 0;
+  height: 20px;
+  width: 100%;
+}
 
 .pixelify {
   font-family: "Pixelify Sans", sans-serif;
@@ -6,6 +60,14 @@
   font-style: normal;
 }
 
-a.dropdown-item:active {
-    background-color: #1abc05;
+del {
+  text-decoration: var(--green-bold) line-through 15%;
+}
+
+i {
+  letter-spacing: 0.05rem;
+}
+
+u {
+  text-decoration: var(--green-bold) underline dashed;
 }
