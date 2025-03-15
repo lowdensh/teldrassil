@@ -7,10 +7,13 @@
 <br><br>
 
 <p align="center">
-    Shona's Website ✨
+    hi, i'm shona 🥰
 </p>
 <p align="center">
-    Neitolan's Realm 🍃
+    a.k.a. lowdensh ✨
+</p>
+<p align="center">
+    this is my realm: teldrassil 🍃
 </p>
 
 <br>
