@@ -24,33 +24,67 @@ a.dropdown-item:active {
 
 /* Ref. CSS combinators and selectors */
 a:not(nav *) {
+  color: var(--green-lite);
   font-family: "Pixelify Sans", sans-serif;
-  text-decoration: var(--green-bold) underline dashed;
   font-weight: bold;
-  color: #fff;
+  text-decoration: var(--green-bold) underline dashed;
   transition: ease-in-out .15s;
 }
 
 a:not(nav *):hover {
-  text-decoration: #fff underline dashed;
   color: var(--green-bold);
+  text-decoration: var(--green-lite) underline dashed;
 }
 
 a:not(nav *)::before {
-  content: '> ';
   color: var(--green-bold);
+  content: '> ';
 }
 
 b {
+  color: var(--pink-lite);
   font-family: "Pixelify Sans", sans-serif;
   font-weight: bold;
-  color: var(--pink-lite);
+}
+
+.border-teldra-green {
+  border: 3px dashed var(--green-bold);
+}
+
+.border-teldra-pink {
+  border: 3px dashed var(--pink-bold);
+}
+
+code {
+  color: var(--pink-bold);
+  letter-spacing: 0.05rem;
 }
 
 .colorblock {
   padding: 0;
   height: 20px;
   width: 100%;
+}
+
+del {
+  text-decoration: var(--green-bold) line-through 15%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0.5rem;
+}
+
+i {
+  letter-spacing: 0.05rem;
+}
+
+li {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+
+ol, ul {
+  padding-left: 1.5rem;
 }
 
 .pixelify {
@@ -60,14 +94,19 @@ b {
   font-style: normal;
 }
 
-del {
-  text-decoration: var(--green-bold) line-through 15%;
-}
-
-i {
+pre {
+  background: color-mix(in srgb, var(--pink-dark) 10%, transparent);
+  border: 3px dashed var(--pink-bold);
+  color: var(--pink-bold);
   letter-spacing: 0.05rem;
+  margin-bottom: 0rem;
+  padding: 0.5rem;
 }
 
 u {
   text-decoration: var(--green-bold) underline dashed;
+}
+
+.u-full {
+  border-bottom: 3px dashed var(--green-bold);
 }
