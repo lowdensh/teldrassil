@@ -1,46 +1,69 @@
 {% extends "base.html" %}
 {% load static %}
+{% block title %}teldrassil{% endblock %}
 {% block content %}
 
-<div class="container p-5">
+<div id="carouselExampleIndicators" class="carousel slide pixelify">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
 
-  <div id="carouselExample" class="carousel slide">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xmidYmid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect>
-          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#555" font-size="3em">
-            <tspan x="50%" dy="0em">hi, i'm</tspan>
-            <tspan x="50%" dy="1em">shona 🥰</tspan>
-          </text>
-        </svg>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xmidYmid slice" focusable="false"><rect width="100%" height="100%" fill="#666"></rect>
-          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#444" font-size="3em">
-            <tspan x="50%" dy="0em">a.k.a.</tspan>
-            <tspan x="50%" dy="1em">lowdensh ✨</tspan>
-          </text>
-        </svg>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xmidYmid slice" focusable="false"><rect width="100%" height="100%" fill="#555"></rect>
-          <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#333" font-size="3em">
-            <tspan x="50%" dy="0em">this is my realm:</tspan>
-            <tspan x="50%" dy="1em">teldrassil 🍃</tspan>
-          </text>
-        </svg>
+    <!-- Item One -->
+    <div class="carousel-item active">
+      <div class="row p-5 bg-pink-dark" style="height:400px;">
+        <div class="col-2"></div>
+          <div class="col-8 p-5 align-self-center">
+            <h1>
+              hi, i'm <br />
+              shona 🥰
+            </h1>
+          </div>
+        <div class="col-2"></div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
-</div>
+    <!-- Item Two -->
+    <div class="carousel-item">
+      <div class="row p-5 bg-green-dark" style="height:400px;">
+        <div class="col-2"></div>
+          <div class="col-8 p-5 align-self-center">
+            <h1>
+              a.k.a. <br />
+              lowdensh ✨
+            </h1>
+          </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+
+    <!-- Item Three -->
+    <div class="carousel-item">
+      <div class="row p-5 bg-pink-dmid" style="height:400px;">
+        <div class="col-2"></div>
+          <div class="col-8 p-5 align-self-center">
+            <h1>
+              welcome to my realm, <br />
+              teldrassil 🍃
+            </h1>
+          </div>
+        <div class="col-2"></div>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev fs-2" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span> <🌛 </span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next fs-2" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span> 🌞 > </span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> <!-- end carousel -->
 
 {% endblock %}
+
+

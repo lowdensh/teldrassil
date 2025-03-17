@@ -4,7 +4,7 @@
   --green-lmid: #83bc42ff;
   --green-lite: #e1e4c2ff;
   --pink-dark:  #87025eff;
-  --pink-dmid:  #f104aaff;
+  --pink-dmid:  #cd0390ff;
   --pink-lmid:  #f68bceff;
   --pink-lite:  #f7cee5ff;
 }
@@ -56,6 +56,14 @@ b {
 
 .border-teldra-pink {
   border: 3px dashed var(--pink-dmid);
+}
+
+.carousel .carousel-indicators [data-bs-target], [data-bs-theme=dark] .carousel .carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  margin: 8px;
+  border-radius: 0;
+  background-color: white;
 }
 
 code {

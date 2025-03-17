@@ -7,13 +7,16 @@
 <br><br>
 
 <p align="center">
-    hi, i'm shona 🥰
-</p>
-<p align="center">
-    a.k.a. lowdensh ✨
-</p>
-<p align="center">
-    this is my realm: teldrassil 🍃
+  hi, i'm <br>
+  shona 🥰
 </p>
 
-<br>
+<p align="center">
+  a.k.a. <br>
+  lowdensh ✨
+</p>
+
+<p align="center">
+  welcome to my realm, <br>
+  teldrassil 🍃
+</p>

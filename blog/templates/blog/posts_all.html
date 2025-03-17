@@ -3,27 +3,23 @@
 {% block title %}teldrassil | blog{% endblock %}
 {% block content %}
 
-<div class="container p-5">
-
-  {% for post in list_of_posts %}
-    <div class="p-5 mb-5 bg-body-tertiary border rounded-3">
-      <div class="container-fluid py-3">
-        <h1 class="display-4 fw-bold fs-1">
-          {{ post.short_title }}
-        </h1>
-        <h2 class="display-6 fs-4">
-          By {{ post.author.display_name }}
-        </h2>
-        <h2 class="display-6 fs-4">
-          On {{ post.date_published }}
-        </h2>
-        <p class="col-md-9 fs-5">
-          {{ post.content }}
-        </p>
-      </div>
+{% for post in list_of_posts %}
+  <div class="p-5 mb-5 bg-body-tertiary border rounded-3">
+    <div class="container-fluid py-3">
+      <h1 class="display-4 fw-bold fs-1">
+        {{ post.short_title }}
+      </h1>
+      <h2 class="display-6 fs-4">
+        By {{ post.author.display_name }}
+      </h2>
+      <h2 class="display-6 fs-4">
+        On {{ post.date_published }}
+      </h2>
+      <p class="col-md-9 fs-5">
+        {{ post.content }}
+      </p>
     </div>
-  {% endfor %}
-
-</div>
+  </div>
+{% endfor %}
 
 {% endblock %}
