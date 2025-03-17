@@ -1,25 +1,28 @@
 :root {
-  --green-dark: #3f5e02ff;
-  --green-bold: #1abc05ff;
-  --green-midd: #83bc42ff;
-  --green-lite: #bfc289ff;
+  --green-dark: #47652cff;
+  --green-dmid: #1abc05ff;
+  --green-lmid: #83bc42ff;
+  --green-lite: #e1e4c2ff;
   --pink-dark:  #87025eff;
-  --pink-bold:  #f104aaff;
-  --pink-midd:  #f15db8ff;
-  --pink-lite:  #f4a3d2ff;
+  --pink-dmid:  #f104aaff;
+  --pink-lmid:  #f68bceff;
+  --pink-lite:  #f7cee5ff;
 }
 
 .bg-green-dark { background-color: var(--green-dark); }
-.bg-green-bold { background-color: var(--green-bold); }
-.bg-green-midd { background-color: var(--green-midd); }
+.bg-green-dmid { background-color: var(--green-dmid); }
+.bg-green-lmid { background-color: var(--green-lmid); }
 .bg-green-lite { background-color: var(--green-lite); }
 .bg-pink-dark  { background-color: var(--pink-dark);  }
-.bg-pink-bold  { background-color: var(--pink-bold);  }
-.bg-pink-midd  { background-color: var(--pink-midd);  }
+.bg-pink-dmid  { background-color: var(--pink-dmid);  }
+.bg-pink-lmid  { background-color: var(--pink-lmid);  }
 .bg-pink-lite  { background-color: var(--pink-lite);  }
 
+.bg-green-dark-fade { background: color-mix(in srgb, var(--green-dark) 10%, transparent); }
+.bg-pink-dark-fade  { background: color-mix(in srgb, var(--pink-dark) 10%, transparent);  }
+
 a.dropdown-item:active {
-  background-color: var(--green-bold);
+  background-color: var(--green-dmid);
 }
 
 /* Ref. CSS combinators and selectors */
@@ -27,36 +30,36 @@ a:not(nav *) {
   color: var(--green-lite);
   font-family: "Pixelify Sans", sans-serif;
   font-weight: bold;
-  text-decoration: var(--green-bold) underline dashed;
+  text-decoration: var(--green-dmid) underline dashed;
   transition: ease-in-out .15s;
 }
 
 a:not(nav *):hover {
-  color: var(--green-bold);
+  color: var(--green-dmid);
   text-decoration: var(--green-lite) underline dashed;
 }
 
 a:not(nav *)::before {
-  color: var(--green-bold);
+  color: var(--green-dmid);
   content: '> ';
 }
 
 b {
-  color: var(--pink-lite);
+  color: var(--pink-lmid);
   font-family: "Pixelify Sans", sans-serif;
   font-weight: bold;
 }
 
 .border-teldra-green {
-  border: 3px dashed var(--green-bold);
+  border: 3px dashed var(--green-dmid);
 }
 
 .border-teldra-pink {
-  border: 3px dashed var(--pink-bold);
+  border: 3px dashed var(--pink-dmid);
 }
 
 code {
-  color: var(--pink-bold);
+  color: var(--pink-dmid);
   letter-spacing: 0.05rem;
 }
 
@@ -67,7 +70,7 @@ code {
 }
 
 del {
-  text-decoration: var(--green-bold) line-through 15%;
+  text-decoration: var(--green-dmid) line-through 15%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -96,17 +99,17 @@ ol, ul {
 
 pre {
   background: color-mix(in srgb, var(--pink-dark) 10%, transparent);
-  border: 3px dashed var(--pink-bold);
-  color: var(--pink-bold);
+  border: 3px dashed var(--pink-dmid);
+  color: var(--pink-dmid);
   letter-spacing: 0.05rem;
   margin-bottom: 0rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 u {
-  text-decoration: var(--green-bold) underline dashed;
+  text-decoration: var(--green-dmid) underline dashed;
 }
 
 .u-full {
-  border-bottom: 3px dashed var(--green-bold);
+  border-bottom: 3px dashed var(--green-dmid);
 }
