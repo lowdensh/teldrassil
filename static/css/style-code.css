@@ -1,0 +1,51 @@
+code {
+  color: var(--pink-dmid);
+}
+
+pre {
+  background: color-mix(in srgb, var(--pink-dark) 10%, transparent);
+  border: 3px dashed var(--pink-dmid);
+  color: var(--pink-dmid);
+  padding: 1rem;
+}
+
+pre:has(code.hljs) {
+  padding: 0rem !important;
+}
+
+pre code.hljs {
+  background: none;
+  color: var(--pink-dmid);
+  padding: 1rem !important;
+}
+
+.hljs-section,
+.hljs-title,
+.hljs-deletion,
+.hljs-number,
+.hljs-quote,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-string,
+.hljs-template-tag,
+.hljs-type {
+  color: var(--green-lmid) !important;
+}
+
+.hljs-addition,
+.hljs-built_in,
+.hljs-bullet,
+.hljs-code {
+  color: var(--green-lite) !important;
+}
+
+.hljs-link,
+.hljs-operator,
+.hljs-regexp,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-symbol,
+.hljs-template-variable,
+.hljs-variable {
+  color: var(--pink-lite) !important;
+}
