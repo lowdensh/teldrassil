@@ -54,6 +54,10 @@ class Post(models.Model):
     auto_now=True,
     null=True,
   )
+  slug = models.SlugField(
+    default='',
+    null=False,
+  )
   category = models.ForeignKey(
     to=Category,
     blank=True,
@@ -77,11 +81,24 @@ class Post(models.Model):
       return self.title[:max_chars] + '...'
     return self.title
 
+  @property
   def short_content(self):
     max_chars = 320
     if len(self.content) > max_chars:
       return self.content[:max_chars] + '... (continued)'
     return self.content
+
+  @property
+  def has_category(self):
+    if self.category is None:
+      return False
+    return True
+
+  @property
+  def string_of_category(self):
+    if self.category is None:
+      return 'none! (yet?)'
+    return self.category.name
 
   @property
   def tags_count(self):

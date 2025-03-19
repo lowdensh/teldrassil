@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}teldrassil | {{ post.short_title }}{% endblock %}
+{% block content %}
+
+<div class="p-5 m-5 mt-0 bg-body-tertiary border-teldra-green">
+  <div class="container-fluid py-3">
+    <div class="row">
+
+      <div class="col">
+
+        <h1 class="pixelify">
+          {{ post.title }}
+        </h1>
+
+        <p>
+          <h5>By: {{ post.author.display_name }}</h5>
+          <h5>On: {{ post.date_published }}</h5>
+          {% if post.has_category %}
+            <h6>Category: <a href="{% url 'blog_posts_category' post.category %}">{{ post.string_of_category }}</a></h6>
+          {% else %}
+            <h6>Category: {{ post.string_of_category }}</h6>
+          {% endif %}
+          <h6>Tags: {{ post.string_of_tags }}</h6>
+        </p>
+
+        <p>
+          {{ post.content }}
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

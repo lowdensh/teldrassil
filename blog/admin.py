@@ -5,16 +5,16 @@ from django.contrib import admin
 
 
 @admin.register(Category)
-class PostAdmin(admin.ModelAdmin):
-  # Main list
+class CategoryAdmin(admin.ModelAdmin):
+  # Main Category list
   list_display = ('name', )
   list_display_links = ('name', )
   search_fields = ('name', )
 
 
 @admin.register(Tag)
-class PostAdmin(admin.ModelAdmin):
-  # Main list
+class TagAdmin(admin.ModelAdmin):
+  # Main Tag list
   list_display = ('name', )
   list_display_links = ('name', )
   search_fields = ('name', )
@@ -22,12 +22,13 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-  # Main list
+  # Main Post list
   list_display = (
     'short_title',
     'author_display_name',
     'date_published',
     'category',
+    'tags_count',
   )
   list_display_links = ('short_title', )
   list_filter = ('author__email', )
@@ -40,6 +41,7 @@ class PostAdmin(admin.ModelAdmin):
   )
 
   # Specific Post instance
+  prepopulated_fields = {'slug': ('title', )}
   fieldsets = (
     ('Meta', {'fields': (
       'author',
@@ -50,11 +52,12 @@ class PostAdmin(admin.ModelAdmin):
     )}),
     ('Details', {'fields': (
       'title',
+      'slug',
       'content',
     )}),
   )
-  readonly_fields = ['date_published', 'date_edited', ]
+  readonly_fields = ['date_published', 'date_edited']
 
-  # Additional or renamed attributes
+  # Additional or renamed Post attributes
   def author_display_name(self, obj):
     return obj.author.display_name
