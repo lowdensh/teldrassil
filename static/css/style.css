@@ -32,7 +32,7 @@ a.dropdown-item:active {
   background-color: var(--green-dmid);
 }
 
-a:not(nav *, .button-view-post) {
+a:not(nav *, .button-go) {
   color: var(--green-lite);
   font-family: "Pixelify Sans", sans-serif;
   font-weight: bold;
@@ -40,12 +40,12 @@ a:not(nav *, .button-view-post) {
   transition: ease-in-out .15s;
 }
 
-a:not(nav *, .button-view-post):hover {
+a:not(nav *, .button-go):hover {
   color: var(--green-dmid);
   text-decoration: var(--green-lite) underline dashed;
 }
 
-a:not(nav *, .button-view-post)::before {
+a:not(nav *, .button-go)::before {
   color: var(--green-dmid);
   content: '> ';
 }
@@ -64,7 +64,7 @@ b {
   border: 3px dashed var(--pink-dmid);
 }
 
-.button-view-post {
+.button-go {
   background-color: var(--green-dmid);
   height: 100%;
   width: 100%;
@@ -75,9 +75,14 @@ b {
   transition: ease-in-out .25s;
 }
 
-.button-view-post:hover {
+.button-go.button-go-forward:hover {
   background-color: var(--pink-dmid);
-  margin-left: 0.5rem;
+  padding-left: 0.8rem;
+}
+
+.button-go.button-go-back:hover {
+  background-color: var(--pink-dmid);
+  padding-right: 0.8rem;
 }
 
 .carousel .carousel-indicators [data-bs-target],
@@ -120,6 +125,12 @@ ol, ul {
   font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
+}
+
+.postify {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 300;
   font-style: normal;
 }
 

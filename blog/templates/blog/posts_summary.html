@@ -12,8 +12,7 @@
             <a href="{% url 'blog_posts_specific' post.id post.slug %}">{{ post.short_title }}</a>
           </h1>
           <p>
-            <h5>By: {{ post.author.display_name }}</h5>
-            <h5>On: {{ post.date_published }}</h5>
+            <h5>By {{ post.author.display_name }} on {{ post.date_published }}</h5>
             {% if post.has_category %}
               <h6>
                 Category: <a href="{% url 'blog_posts_category' post.category %}">{{ post.string_of_category }}</a>
@@ -30,7 +29,7 @@
           </p>
         </div>
         <div class="col-lg-3 p-3">
-          <a class="button-view-post pixelify fs-2" href="{% url 'blog_posts_specific' post.id post.slug %}">
+          <a class="button-go button-go-forward pixelify fs-2" href="{% url 'blog_posts_specific' post.id post.slug %}">
             read >
           </a>
         </div>

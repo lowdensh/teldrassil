@@ -3,19 +3,16 @@
 {% block title %}teldrassil | {{ post.short_title }}{% endblock %}
 {% block content %}
 
-<div class="p-5 m-5 mt-0 bg-body-tertiary border-teldra-green">
-  <div class="container-fluid py-3">
-    <div class="row">
+<div class="container-fluid py-3">
+  <div class="row">
 
-      <div class="col">
-
+    <div class="col-lg-5 pe-5 mb-5">
+      <div class="p-4 align-self-top bg-body-tertiary border-teldra-green">
         <h1 class="pixelify">
           {{ post.title }}
         </h1>
-
         <p>
-          <h5>By: {{ post.author.display_name }}</h5>
-          <h5>On: {{ post.date_published }}</h5>
+          <h5>By {{ post.author.display_name }} on {{ post.date_published }}</h5>
           {% if post.has_category %}
             <h6>Category: <a href="{% url 'blog_posts_category' post.category %}">{{ post.string_of_category }}</a></h6>
           {% else %}
@@ -23,16 +20,23 @@
           {% endif %}
           <h6>Tags: {{ post.string_of_tags }}</h6>
         </p>
-
-        <p>
-          {{ post.content }}
-        </p>
-
+        <p><a class="button-go button-go-back reverse pixelify fs-2" href="{{request.META.HTTP_REFERER|escape}}">
+          < back
+        </a></p>
       </div>
-
     </div>
 
-  </div>
-</div>
+    <div id="post-content" class="col-lg-7 mb-5 p-2 postify fs-4">
+      <p>
+        {{ post.content|linebreaksbr }}
+      </p>
+      <br />
+      <p><a class="button-go button-go-back reverse pixelify fs-2" href="{{request.META.HTTP_REFERER|escape}}">
+        < back
+      </a></p>
+    </div>
+
+  </div> <!-- end row -->
+</div> <!-- end container -->
 
 {% endblock %}
