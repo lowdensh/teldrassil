@@ -123,6 +123,16 @@ ol, ul {
   font-style: normal;
 }
 
+#teldra-nav-bar {
+  z-index: 999 !important;
+}
+
+#teldra-filter-bar {
+  z-index: 998 !important;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 u {
   text-decoration: var(--green-dmid) underline dashed;
 }

@@ -1,0 +1,22 @@
+{% load static %}
+
+<nav id="teldra-filter-bar" class="sticky-top bg-pink-dark border-bottom">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col text-center">
+        {% if filter_text %}
+          <b>Filter:</b> <span class="pixelify">{{ filter_text }}</span>
+        {% else %}
+          Wah, wah, filter baahrr! Shona's best website so far!
+        {% endif %}
+      </div>
+    </div>
+  </div> <!--END container-->
+</nav> <!--END navbar sticky-->
+
+<script>
+  var teldraNavBar = document.getElementById('teldra-nav-bar');
+  var height = teldraNavBar.offsetHeight;
+  var teldraFilterBar =  document.getElementById('teldra-filter-bar');
+  teldraFilterBar.setAttribute("style", "top:" + height + "px")
+</script>

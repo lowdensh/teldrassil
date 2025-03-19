@@ -4,11 +4,11 @@
 
 {% load static %}
 
-<nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body pixelify">
+<nav id="teldra-nav-bar" class="navbar sticky-top navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body pixelify">
   <div class="container-fluid">
 
     <!--Branding-->
-    <a class="navbar-brand" href="{% url 'users-home' %}">
+    <a class="navbar-brand" href="{% url 'users_home' %}">
       <img src="{% static 'images/favicon.ico' %}" alt="Logo" width="24" height="24" class="d-inline-block align-text-top">
       teldrassil
     </a>
@@ -22,15 +22,15 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'users-home' %}">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'users_home' %}">
           home
         </a></li>
 
-        <li class="nav-item"><a class="nav-item nav-link" href="{% url 'users-stylish' %}">
+        <li class="nav-item"><a class="nav-item nav-link" href="{% url 'users_stylish' %}">
           stylish
         </a></li>
 
-        <li class="nav-item"><a class="nav-item nav-link" href="{% url 'blog-posts_all' %}">
+        <li class="nav-item"><a class="nav-item nav-link" href="{% url 'blog_posts_all' %}">
           blog
         </a></li>
 

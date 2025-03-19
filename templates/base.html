@@ -29,6 +29,10 @@
 <body>
   {% include 'navigation.html' %}
 
+  {% if filter %}
+    {% include 'filter_bar.html' %}
+  {% endif %}
+
   <main>
     <div class="container-fluid p-5">
       {% block content %}
