@@ -9,20 +9,34 @@
       <div class="row">
 
         <div class="col-lg-9 pe-5">
+
           <h1 class="pixelify">
-            <a href="#">{{ post.short_title }}</a>
+            <a href="{% url 'blog_posts_specific' post.id %}">{{ post.short_title }}</a>
           </h1>
+
           <p>
             <h5>By: {{ post.author.display_name }}</h5>
             <h5>On: {{ post.date_published }}</h5>
-            <h6>Category: {{ post.category }}</h6>
+            {% if post.has_category %}
+              <h6>
+                Category: <a href="{% url 'blog_posts_category' post.category %}">{{ post.string_of_category }}</a>
+              </h6>
+            {% else %}
+              <h6>
+                Category: {{ post.string_of_category }}
+              </h6>
+            {% endif %}
             <h6>Tags: {{ post.string_of_tags }}</h6>
           </p>
-          <p>{{ post.short_content }}</p>
+
+          <p>
+            {{ post.short_content }}
+          </p>
+
         </div>
 
         <div class="col-lg-3 p-3">
-          <a class="button-view-post pixelify fs-2" href="">
+          <a class="button-view-post pixelify fs-2" href="{% url 'blog_posts_specific' post.id %}">
             read >
           </a>
         </div>

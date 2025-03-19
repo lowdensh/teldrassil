@@ -4,6 +4,12 @@ from django.urls import path
 
 appname = 'users'
 urlpatterns = [
-    path('', views.home, name='users-home'),
-    path('stylish/', views.stylish, name='users-stylish'),
+    path(
+      '',
+      views.users_home,
+      name='users_home'),
+    path(
+      'stylish/',
+      views.users_stylish,
+      name='users_stylish'),
 ]
