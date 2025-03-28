@@ -19,6 +19,16 @@ def blog_posts_category(request, category):
   }
   return render(request, 'blog/posts_summary.html', context)
 
+def blog_posts_tag(request, tag):
+  list_of_posts = Post.objects.filter(tags__name__contains = tag)
+  context = {
+    'list_of_posts': list_of_posts,
+    'tag': tag,
+    'filter': True,
+    'filter_text': 'Tag: ' + tag,
+  }
+  return render(request, 'blog/posts_summary.html', context)
+
 def blog_posts_specific(request, post_id, post_slug):
   post = get_object_or_404(Post, pk=post_id, slug=post_slug)
   context = {

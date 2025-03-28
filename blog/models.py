@@ -76,23 +76,17 @@ class Post(models.Model):
 
   @property
   def short_title(self):
-    max_chars = 39
+    max_chars = 42
     if len(self.title) > max_chars:
-      return self.title[:max_chars] + '...'
+      return self.title[:max_chars-3] + '...'
     return self.title
 
   @property
   def short_content(self):
     max_chars = 350
     if len(self.content) > max_chars:
-      return self.content[:max_chars] + '...'
+      return self.content[:max_chars-3] + '...'
     return self.content
-
-  @property
-  def has_category(self):
-    if self.category is None:
-      return False
-    return True
 
   @property
   def string_of_category(self):

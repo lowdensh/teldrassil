@@ -15,6 +15,11 @@ urlpatterns = [
       name='blog_posts_category'
     ),
     path(
+      'tag/<tag>/',
+      views.blog_posts_tag,
+      name='blog_posts_tag'
+    ),
+    path(
       'post/<int:post_id>/<slug:post_slug>/',
       views.blog_posts_specific,
       name='blog_posts_specific'
