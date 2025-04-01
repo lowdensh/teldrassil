@@ -42,6 +42,7 @@ INSTALLED_APPS = [
   # teldrassil
   'users',
   'blog',
+  'music',
 ]
 
 AUTH_USER_MODEL = "users.CustomUser"

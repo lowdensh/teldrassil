@@ -21,4 +21,5 @@ urlpatterns = [
   # teldrassil
   path('', include('users.urls')),
   path('blog/', include('blog.urls')),
+  path('music/', include('music.urls')),
 ]
